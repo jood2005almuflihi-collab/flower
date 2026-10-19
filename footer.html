@@ -1,0 +1,142 @@
+
+<style>
+.fl-footer {
+  font-family: "Tajawal", Arial, sans-serif;
+  background: linear-gradient(125deg, #4c1426, #8d2945, #591726);
+  color: white;
+}
+
+.fl-footer * { box-sizing: border-box; }
+
+.fl-footer-accent {
+  height: 5px;
+  background: linear-gradient(90deg, #8d2945, #ffcad9, #8d2945);
+}
+
+.fl-footer-grid {
+  max-width: 1250px;
+  margin: auto;
+  padding: 65px 20px 50px;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+  gap: 40px;
+}
+
+.fl-footer-logo {
+  font-size: 29px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.fl-footer-text {
+  color: #f5d9e1;
+  font-size: 14px;
+  line-height: 2.1;
+}
+
+.fl-footer h3 {
+  color: #ffd2df;
+  font-size: 17px;
+  margin: 5px 0 22px;
+}
+
+.fl-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fl-footer li { margin-bottom: 16px; }
+
+.fl-footer a {
+  color: #f3dce3;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.fl-footer a:hover { color: white; }
+
+.fl-footer-bottom {
+  text-align: center;
+  color: #f0cbd7;
+  padding: 24px 15px;
+  border-top: 1px solid rgba(255,255,255,.15);
+  font-size: 13px;
+}
+
+@media(max-width: 850px) {
+  .fl-footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media(max-width: 500px) {
+  .fl-footer-grid { grid-template-columns: 1fr; }
+}
+</style>
+
+<footer class="fl-footer" id="contact">
+  <div class="fl-footer-accent"></div>
+
+  <div class="fl-footer-grid">
+    <div>
+      <div class="fl-footer-logo">🌷 بستان الربيع</div>
+      <p class="fl-footer-text">
+        وجهتك لعالم الزهور والنباتات وكل ما تحتاجه
+        لتجعل منزلك وحديقتك أكثر جمالاً وحيوية.
+        نسعى لتقديم تجربة تسوق مليئة بالألوان
+        والبهجة والطبيعة.
+      </p>
+    </div>
+
+    <div>
+      <h3>روابط مهمة</h3>
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="#products">جميع المنتجات</a></li>
+        <li><a href="#categories">الأقسام</a></li>
+        <li><a href="#bouquets">باقات الزهور</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>مساعدة العملاء</h3>
+      <ul>
+        <li><a href="#about">من نحن</a></li>
+        <li><a href="#contact">تواصل معنا</a></li>
+        <li><a href="#contact">الشحن والتوصيل</a></li>
+        <li><a href="#contact">الاستبدال والاسترجاع</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>تواصل معنا</h3>
+      <p class="fl-footer-text">
+        📍 المملكة العربية السعودية
+      </p>
+      <p class="fl-footer-text">
+        ✉ info@example.com
+      </p>
+      <p class="fl-footer-text">
+        🌸 تابعنا لاكتشاف جديد بستان الربيع
+      </p>
+    </div>
+  </div>
+
+  <div class="fl-footer-bottom">
+    جميع الحقوق محفوظة ©
+    <span id="flowerFooterYear">2026</span>
+    بستان الربيع
+  </div>
+</footer>
+
+<script>
+(function () {
+  const year = document.getElementById("flowerFooterYear");
+
+  if (year) {
+    year.textContent = new Date().getFullYear();
+  }
+})();
+</script>

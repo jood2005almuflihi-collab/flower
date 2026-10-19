@@ -1,0 +1,691 @@
+
+<style>
+/* =================================
+   SPRING GARDEN HEADER
+   بستان الربيع
+================================= */
+
+.fl-header {
+  font-family: "Tajawal", Arial, sans-serif;
+  position: relative;
+  z-index: 50;
+  color: #591726;
+  width: 100%;
+}
+
+.fl-header * {
+  box-sizing: border-box;
+}
+
+/* Announcement Bar */
+.fl-offer {
+  background: linear-gradient(
+    100deg,
+    #591726,
+    #bd4968,
+    #591726
+  );
+  color: white;
+  text-align: center;
+  padding: 11px 15px;
+  font-size: 13px;
+}
+
+/* Main Header */
+.fl-top {
+  background: #fff7f9;
+  border-bottom: 1px solid #f0d8df;
+}
+
+.fl-wrap {
+  max-width: 1250px;
+  margin: auto;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+/* =================================
+   PROFESSIONAL CIRCULAR LOGO
+================================= */
+
+.fl-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: #8d2945;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Circular Logo Container */
+.fl-logo-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: relative;
+  flex-shrink: 0;
+
+  background: linear-gradient(
+    135deg,
+    #591726 0%,
+    #8d2945 50%,
+    #bd4968 100%
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 3px solid #ffffff;
+
+  box-shadow:
+    0 5px 20px rgba(141, 41, 69, 0.22),
+    inset 0 0 14px rgba(255, 255, 255, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Inner Circular Border */
+.fl-logo-circle::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border: 1px solid rgba(255, 208, 222, 0.75);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Hover Animation */
+.fl-brand:hover .fl-logo-circle {
+  transform: rotate(-8deg) scale(1.05);
+
+  box-shadow:
+    0 8px 25px rgba(141, 41, 69, 0.35);
+}
+
+/* SVG Flower Logo */
+.fl-logo-icon {
+  width: 66px;
+  height: 66px;
+  display: block;
+}
+
+/* Brand Text */
+.fl-brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.fl-brand-text strong {
+  display: block;
+  font-size: 29px;
+  font-weight: 800;
+  color: #8d2945;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.fl-brand-text small {
+  display: block;
+  color: #bc8292;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+/* =================================
+   SEARCH
+================================= */
+
+.fl-search {
+  display: flex;
+  flex: 1;
+  max-width: 440px;
+  border: 1px solid #eccbd5;
+  background: white;
+  border-radius: 30px;
+  overflow: hidden;
+
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.fl-search:focus-within {
+  border-color: #bd4968;
+
+  box-shadow:
+    0 0 0 3px rgba(189, 73, 104, 0.12);
+}
+
+.fl-search input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  padding: 14px 20px;
+  font: inherit;
+  background: transparent;
+  color: #591726;
+}
+
+.fl-search input::placeholder {
+  color: #ae8490;
+}
+
+.fl-search button {
+  border: none;
+  padding: 0 25px;
+  background: #a73353;
+  color: white;
+  cursor: pointer;
+  font: inherit;
+  transition: background 0.2s;
+}
+
+.fl-search button:hover {
+  background: #81223e;
+}
+
+/* =================================
+   ACTION BUTTONS
+================================= */
+
+.fl-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fl-action {
+  border: 1px solid #ebcbd4;
+  background: white;
+  color: #872741;
+  border-radius: 25px;
+  padding: 12px 17px;
+  cursor: pointer;
+  font: inherit;
+  white-space: nowrap;
+
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+
+.fl-action:hover {
+  background: #fce9ee;
+  border-color: #e5aabd;
+}
+
+/* =================================
+   NAVIGATION BAR
+================================= */
+
+.fl-nav {
+  background: linear-gradient(
+    90deg,
+    #752039,
+    #b83f62,
+    #752039
+  );
+}
+
+.fl-links {
+  max-width: 1250px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+}
+
+.fl-links a {
+  text-decoration: none;
+  color: white;
+  padding: 17px 0;
+  font-size: 14px;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.fl-links a:hover {
+  color: #ffdee7;
+}
+
+/* Underline Hover Effect */
+.fl-links a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  height: 2px;
+  width: 0;
+  background: #ffdee7;
+  transition: width 0.25s ease;
+}
+
+.fl-links a:hover::after {
+  width: 100%;
+}
+
+.fl-menu-button {
+  display: none;
+}
+
+/* =================================
+   TABLET RESPONSIVE
+================================= */
+
+@media (max-width: 1050px) {
+  .fl-wrap {
+    gap: 15px;
+  }
+
+  .fl-logo-circle {
+    width: 65px;
+    height: 65px;
+  }
+
+  .fl-logo-icon {
+    width: 54px;
+    height: 54px;
+  }
+
+  .fl-brand-text strong {
+    font-size: 24px;
+  }
+
+  .fl-links {
+    gap: 22px;
+  }
+}
+
+/* =================================
+   MOBILE RESPONSIVE
+================================= */
+
+@media (max-width: 800px) {
+  .fl-wrap {
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 15px;
+  }
+
+  .fl-brand {
+    gap: 9px;
+  }
+
+  .fl-logo-circle {
+    width: 56px;
+    height: 56px;
+    border-width: 2px;
+  }
+
+  .fl-logo-icon {
+    width: 47px;
+    height: 47px;
+  }
+
+  .fl-brand-text strong {
+    font-size: 21px;
+  }
+
+  .fl-brand-text small {
+    font-size: 9px;
+    letter-spacing: 1.2px;
+  }
+
+  .fl-search {
+    order: 3;
+    flex-basis: 100%;
+    max-width: none;
+  }
+
+  .fl-action {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .fl-menu-button {
+    display: inline-block;
+  }
+
+  .fl-links {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    padding: 10px 20px;
+  }
+
+  .fl-links.open {
+    display: flex;
+  }
+
+  .fl-links a {
+    padding: 12px;
+    border-bottom: 1px solid #d27791;
+  }
+
+  .fl-links a::after {
+    display: none;
+  }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 380px) {
+  .fl-logo-circle {
+    width: 48px;
+    height: 48px;
+  }
+
+  .fl-logo-icon {
+    width: 41px;
+    height: 41px;
+  }
+
+  .fl-brand-text strong {
+    font-size: 17px;
+  }
+
+  .fl-brand-text small {
+    font-size: 8px;
+  }
+
+  .fl-actions {
+    gap: 5px;
+  }
+
+  .fl-action {
+    padding: 8px;
+    font-size: 11px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fl-logo-circle,
+  .fl-search,
+  .fl-action,
+  .fl-links a {
+    transition: none;
+  }
+}
+</style>
+
+<!-- =================================
+     HEADER HTML
+================================= -->
+
+<header class="fl-header">
+
+  <!-- Announcement Bar -->
+  <div class="fl-offer">
+    🌸 أهلاً بكِ في بستان الربيع | جمال الطبيعة يصل إليكِ
+  </div>
+
+  <!-- Main Header -->
+  <div class="fl-top">
+    <div class="fl-wrap">
+
+      <!-- Brand + Circular Flower Logo -->
+      <a
+        class="fl-brand"
+        href="index.html"
+        aria-label="بستان الربيع - الصفحة الرئيسية"
+      >
+
+        <!-- Circular Logo -->
+        <span class="fl-logo-circle">
+
+          <!-- SVG Flower -->
+          <svg
+            class="fl-logo-icon"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+
+            <!-- Decorative Stars -->
+            <circle
+              cx="22"
+              cy="25"
+              r="2"
+              fill="#ffe1ea"
+            />
+
+            <circle
+              cx="79"
+              cy="28"
+              r="2"
+              fill="#ffe1ea"
+            />
+
+            <path
+              d="M22 40 L24 45 L29 47 L24 49 L22 54 L20 49 L15 47 L20 45 Z"
+              fill="#ffe1ea"
+            />
+
+            <!-- Stem -->
+            <path
+              d="M50 77
+                 C49 67 51 57 51 45"
+              fill="none"
+              stroke="#9dcb94"
+              stroke-width="3.5"
+              stroke-linecap="round"
+            />
+
+            <!-- Left Leaf -->
+            <path
+              d="M50 67
+                 Q32 51 28 68
+                 Q37 80 50 72 Z"
+              fill="#98c78d"
+            />
+
+            <!-- Right Leaf -->
+            <path
+              d="M51 62
+                 Q68 46 74 59
+                 Q68 72 52 68 Z"
+              fill="#b2d9a7"
+            />
+
+            <!-- Flower Petals -->
+            <path
+              d="M50 47
+                 C31 44 31 28 45 27
+                 C47 15 63 17 66 30
+                 C82 29 83 47 69 54
+                 C66 66 48 65 43 56
+                 C30 56 29 44 38 38 Z"
+              fill="#f8c5d3"
+              stroke="#ffe1e9"
+              stroke-width="1.5"
+            />
+
+            <!-- Inner Rose -->
+            <path
+              d="M50 48
+                 C38 41 43 31 52 32
+                 C65 32 68 45 57 51
+                 C47 57 42 45 50 41
+                 C59 37 64 47 55 47"
+              fill="none"
+              stroke="#a82f52"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+
+            <!-- Flower Center -->
+            <circle
+              cx="53"
+              cy="45"
+              r="2"
+              fill="#a82f52"
+            />
+
+          </svg>
+        </span>
+
+        <!-- Brand Name -->
+        <span class="fl-brand-text">
+          <strong>بستان الربيع</strong>
+          <small>SPRING GARDEN</small>
+        </span>
+
+      </a>
+
+      <!-- Search Form -->
+      <form class="fl-search" id="flowerSearch">
+
+        <input
+          id="flowerSearchInput"
+          type="search"
+          placeholder="ابحث عن ورد، نبات أو مستلزمات زراعية..."
+          aria-label="البحث عن المنتجات"
+        >
+
+        <button type="submit">
+          بحث
+        </button>
+
+      </form>
+
+      <!-- Cart & Menu -->
+      <div class="fl-actions">
+
+        <button
+          class="fl-action"
+          id="flowerCart"
+          type="button"
+        >
+          🛒 السلة
+          (<span id="flowerCartCount">0</span>)
+        </button>
+
+        <button
+          class="fl-action fl-menu-button"
+          id="flowerMenu"
+          type="button"
+          aria-label="فتح القائمة"
+          aria-controls="flowerLinks"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="fl-nav" aria-label="التنقل الرئيسي">
+
+    <div class="fl-links" id="flowerLinks">
+
+      <a href="index.html">
+        الرئيسية
+      </a>
+
+      <a href="#categories">
+        الأقسام
+      </a>
+
+      <a href="#products">
+        جميع المنتجات
+      </a>
+
+      <a href="#bouquets">
+        باقات الورد
+      </a>
+
+      <a href="#about">
+        من نحن
+      </a>
+
+     <a href="contact.html">
+  تواصل معنا
+</a>
+
+    </div>
+
+  </nav>
+
+</header>
+
+<!-- =================================
+     JAVASCRIPT
+================================= -->
+
+<script>
+(function () {
+  "use strict";
+
+  /* Mobile Menu */
+  const menu =
+    document.getElementById("flowerMenu");
+
+  const links =
+    document.getElementById("flowerLinks");
+
+  menu?.addEventListener("click", function () {
+    const open = links.classList.toggle("open");
+
+    menu.setAttribute(
+      "aria-expanded",
+      String(open)
+    );
+  });
+
+  /* Close menu on link click */
+  links?.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      links.classList.remove("open");
+
+      menu?.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+    });
+  });
+
+  /* Product Search */
+  document.getElementById("flowerSearch")
+    ?.addEventListener("submit", function (e) {
+
+      e.preventDefault();
+
+      const query = document
+        .getElementById("flowerSearchInput")
+        .value.trim();
+
+      document.dispatchEvent(
+        new CustomEvent("flower:search", {
+          detail: { query }
+        })
+      );
+
+      document.getElementById("products")
+        ?.scrollIntoView({
+          behavior: "smooth"
+        });
+    });
+
+  /* Shopping Cart */
+  document.getElementById("flowerCart")
+    ?.addEventListener("click", () => {
+      document.dispatchEvent(
+        new Event("flower:cart")
+      );
+    });
+
+})();
+</script>
